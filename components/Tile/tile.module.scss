@@ -1,0 +1,28 @@
+@import '../../constants/styles.scss';
+
+
+.tile {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	border-radius: 0.25rem;
+	box-shadow: 0rem 0.3rem 0.3rem $color-shadow;
+	outline: 0.1rem solid $color-outline;
+	background-color: $color-white;
+	padding: 1rem 0.75rem;
+	overflow: hidden;
+	transition: all 0.15s ease-in-out;
+
+	&--hover {
+		&:hover {
+			box-shadow: 0rem 0.6rem 0.6rem $color-shadow;
+			scale: 1.15;
+			z-index: 1;
+			cursor: pointer;
+
+			@media (max-width: $breakpoint-md) {
+				scale: 1.05;
+			}
+		}
+	}
+}

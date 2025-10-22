@@ -1,0 +1,39 @@
+@import '../../constants/styles.scss';
+
+:root {
+  --stock-ticker-min-width: 10.5rem;
+	--stock-ticker-min-height: 15rem;
+}
+
+.stock-tickers__container {
+	display: grid;
+	gap: 0.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(var(--stock-ticker-min-width), 1fr));
+	grid-auto-rows: 1fr;
+	padding: 1.5rem;
+
+	@media (max-width: $breakpoint-md) {
+		max-width: 100%;
+		grid-template-columns: 1fr;
+		padding: 1rem;
+	}
+}
+
+.stock-ticker {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	min-height: var(--stock-ticker-min-height);
+
+	h2 {
+		font-size: 1rem;
+		text-align: center;
+	}
+
+	img {
+		pointer-events: none;
+		user-select: none;
+	}
+}
+
