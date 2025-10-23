@@ -1,6 +1,6 @@
 import STOCKS_FIXTURE from "@fixtures/stocks";
 
-const EMULATED_API_RESPONSE_DELAY = 1000; // ms
+const EMULATED_API_RESPONSE_DELAY = 0; // ms
 const ALPHA_VANTAGE_BASE_URL = "https://www.alphavantage.co/query";
 const ALPHA_VANTAGE_API_KEY = process.env.ALPHA_VANTAGE_API_KEY || "";
 
