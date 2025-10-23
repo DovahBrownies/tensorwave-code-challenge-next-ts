@@ -27,6 +27,8 @@
       "@app/*": [ "./app/*" ],
       "@constants/*": [ "./constants/*" ],
       "@components/*": [ "./components/*" ],
+      "@fixtures/*": [ "./fixtures/*" ],
+      "@utils/*": [ "./utils/*" ]
     }
   },
   "include": [

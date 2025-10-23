@@ -10,7 +10,6 @@
 	gap: 0.5rem;
 	grid-template-columns: repeat(auto-fit, minmax(var(--stock-ticker-min-width), 1fr));
 	grid-auto-rows: 1fr;
-	padding: 1.5rem;
 
 	@media (max-width: $breakpoint-md) {
 		max-width: 100%;

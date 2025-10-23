@@ -1,10 +1,10 @@
 import Tile from "@components/Tile";
 import Image from "next/image";
 import styles from "./home.module.scss";
-import URLS from "@constants/urls";
+import { API_ENDPOINTS } from "@utils/api";
 
 const getAllStockSymbols = async () => {
-  const res = await fetch(URLS.ALL_STOCKS);
+  const res = await fetch(API_ENDPOINTS.ALL_STOCKS.url);
   return await res.json();
 };
 
@@ -15,7 +15,12 @@ export default async function StockList() {
       {stockSymbols.map((stock: Stock) => (
         <Tile key={stock.symbol} withHoverEffect>
           <div className={styles['stock-ticker']}>
-            <Image src={stock.image_url} alt={`${stock.name} logo`} width={250} height={250} />
+            <Image
+							src={stock.image_url}
+							alt={`${stock.name} logo`}
+							width={250}
+							height={250}
+						/>
             <small>{stock.symbol}</small>
             <h2>{stock.name}</h2>
           </div>
