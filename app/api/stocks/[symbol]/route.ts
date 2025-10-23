@@ -27,7 +27,7 @@ export async function GET(request: Request, context: { params: Promise<{ symbol:
 		const responseObj = {
 			overview: {
 				...overview,
-				image_url: STOCKS_FIXTURE[symbol].image_url,
+				Logo: STOCKS_FIXTURE[symbol].image_url, // CamelCase to follow existing structure
 			},
 			time_series: {
 				meta_data: timeSeriesDaily["Meta Data"],

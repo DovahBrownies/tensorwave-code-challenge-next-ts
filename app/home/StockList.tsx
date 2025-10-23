@@ -1,7 +1,7 @@
 import Tile from "@components/Tile";
 import Image from "next/image";
-import styles from "./home.module.scss";
 import { API_ENDPOINTS } from "@utils/api";
+import styles from "./home.module.scss";
 
 const getAllStockSymbols = async () => {
   const res = await fetch(API_ENDPOINTS.ALL_STOCKS.url);

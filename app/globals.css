@@ -28,3 +28,8 @@ body {
 main {
   padding: 1.5rem;
 }
+
+img {
+  pointer-events: none;
+  user-select: none;
+}

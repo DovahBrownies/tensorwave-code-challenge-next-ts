@@ -1,0 +1,41 @@
+@import '../../../constants/styles.scss';
+
+.stock {
+	&__header {
+		display: flex;
+		align-items: center;
+
+		@media (max-width: $breakpoint-md) {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+	&__name {
+		font-size: 2.5rem;
+		font-weight: bold;
+	}
+
+	&__symbol {
+		font-size: 1.5rem;
+	}
+
+	&__description {
+		font-style: italic;
+		border: none;
+		border-left: 0.5rem solid $color-outline;
+		padding-left: 1rem;
+		margin: 1rem 0;
+
+		@media (max-width: $breakpoint-md) {
+			border-width: 0.25rem;
+			padding-left: 0.5rem;
+		}
+	}
+
+	&__details {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+}
