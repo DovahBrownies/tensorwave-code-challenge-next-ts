@@ -1,8 +1,8 @@
 
 'use client';
 
-import styles from './loader.module.scss';
 import { Fragment, useState, useMemo } from 'react';
+import styles from './loader.module.scss';
 
 const NUMBER_OF_FLARES = 5;
 const FLARE_ANIMATION_OFFSET = 54;
