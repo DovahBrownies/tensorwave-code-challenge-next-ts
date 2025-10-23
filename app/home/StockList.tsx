@@ -1,5 +1,6 @@
 import Tile from "@components/Tile";
 import Image from "next/image";
+import Link from "next/link";
 import { API_ENDPOINTS } from "@utils/api";
 import styles from "./home.module.scss";
 
@@ -13,18 +14,23 @@ export default async function StockList() {
   return (
     <div className={styles['stock-tickers__container']}>
       {stockSymbols.map((stock: Stock) => (
-        <Tile key={stock.symbol} withHoverEffect>
-          <div className={styles['stock-ticker']}>
-            <Image
-							src={stock.image_url}
-							alt={`${stock.name} logo`}
-							width={250}
-							height={250}
-						/>
-            <small>{stock.symbol}</small>
-            <h2>{stock.name}</h2>
-          </div>
-        </Tile>
+        <Link
+          key={stock.symbol}
+          href={`/stock/${stock.symbol}`}
+        >
+          <Tile withHoverEffect>
+            <div className={styles['stock-ticker']}>
+              <Image
+                src={stock.image_url}
+                alt={`${stock.name} logo`}
+                width={250}
+                height={250}
+              />
+              <small>{stock.symbol}</small>
+              <h2>{stock.name}</h2>
+            </div>
+          </Tile>
+        </Link>
       ))}
     </div>
   );
