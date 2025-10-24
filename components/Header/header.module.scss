@@ -7,7 +7,7 @@
 	padding: 0 1rem;
 	position: sticky;
 	top: 0;
-	height: 3.5rem;
+	min-height: 3.5rem;
 	border-bottom: 0.1rem solid $color-outline;
 	background-color: $color-white;
 	box-shadow: 0rem 0.1rem 0.1rem $color-shadow;
@@ -15,6 +15,7 @@
 
 	@media (max-width: $breakpoint-md) {
 		justify-content: center;
+		padding: 0 0.5rem;
 	}
 
 	&__back-button {
@@ -22,6 +23,10 @@
 		padding: 0.5rem;
 		transition: background-color 0.25s ease-in-out;
 		cursor: pointer;
+
+		@media (max-width: $breakpoint-md) {
+			margin-left: 1rem;
+		}
 
 		&:hover {
 			background-color: $color-light-gray;
